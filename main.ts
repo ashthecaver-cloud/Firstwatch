@@ -16,7 +16,7 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 input.onGesture(Gesture.Shake, function () {
-    adjust = 0
+    adjust = hours
     if (ampm) {
         if (hours > 12) {
             adjust = hours - 12
@@ -31,7 +31,7 @@ input.onGesture(Gesture.Shake, function () {
     if (minutes < 10) {
         time = "" + time + "0"
     }
-    time = "time" + "minutes"
+    time = "" + time + minutes
     if (ampm) {
         if (hours > 11) {
             time = "" + time + "PM"
